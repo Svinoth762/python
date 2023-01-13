@@ -1,0 +1,5 @@
+import itertools
+digits = '555'
+
+combinations = [''.join(p) for p in itertools.permutations(digits)]
+print(combinations)
