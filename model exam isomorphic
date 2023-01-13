@@ -1,0 +1,23 @@
+def is_isomorphic(s,t):
+    if (len(s)!=len(t)):
+       return False
+    else:
+        s_map={}
+        t_map={}
+        for i in range(len(s)):
+            s_char=s[i]
+            t_char=t[i]
+            if s_char in s_map and t_char in t_map:
+                if s_map[s_char]!=t_char or t_map[t_char]!=s_char:
+                     return False
+            elif s_char in s_map or t_char in t_map:
+                return False
+            else:
+                s_map[s_char]=t_char
+                t_map[t_char]=s_char
+                return True
+print(is_isomorphic('egg','add'))
+print(is_isomorphic('foo','bar'))
+print(is_isomorphic('paper','title'))
+print(is_isomorphic('fry','sky'))
+print(is_isomorphic('apples','apple'))
