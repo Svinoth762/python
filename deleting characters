@@ -1,0 +1,11 @@
+#program for deleting all ocurrences of c in s
+def delchar(s,c):
+    if (len(c)==1):
+        for i in range(len(s)):
+            if (c is not s[i]):
+                 print(s[i])
+            else:
+                continue
+cstr1=input("enter the string :")
+ch1=input("enter the character to skip")
+delchar(str1,ch1)
